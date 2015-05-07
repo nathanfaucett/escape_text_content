@@ -8,10 +8,13 @@ var ESCAPE_REGEX = /[&><"']/g,
     };
 
 
+module.exports = escapeTextContent;
+
+
+function escapeTextContent(text) {
+    return (text + "").replace(ESCAPE_REGEX, escaper);
+}
+
 function escaper(match) {
     return ESCAPE_LOOKUP[match];
 }
-
-module.exports = function escapeTextContent(text) {
-    return (text + "").replace(ESCAPE_REGEX, escaper);
-};
