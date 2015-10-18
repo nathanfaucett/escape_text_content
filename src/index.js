@@ -1,20 +1,26 @@
-var ESCAPE_REGEX = /[&><"']/g,
-    ESCAPE_LOOKUP = {
-        "&": "&amp;",
-        ">": "&gt;",
-        "<": "&lt;",
-        "\"": "&quot;",
-        "'": "&#x27;"
-    };
+var reEscape = /[&><"']/g;
 
 
 module.exports = escapeTextContent;
 
 
 function escapeTextContent(text) {
-    return (text + "").replace(ESCAPE_REGEX, escaper);
+    return (text + "").replace(reEscape, escaper);
 }
 
 function escaper(match) {
-    return ESCAPE_LOOKUP[match];
+    switch (match) {
+        case "&":
+            return "&amp;";
+        case ">":
+            return "&gt;";
+        case "<":
+            return "&lt;";
+        case "\"":
+            return "&quot;";
+        case "'":
+            return "&#x27;";
+        default:
+            return match;
+    }
 }

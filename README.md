@@ -1,4 +1,4 @@
-escape_text_content
+escapeTextContent
 =======
 
-escapeTextContent for the browser and node.js
+escape text content for the browser and node.js
