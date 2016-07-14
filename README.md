@@ -1,4 +1,4 @@
 escapeTextContent
 =======
 
-escape text content for the browser and node.js
+escape text content, <div> becomes &lt;div&gt;

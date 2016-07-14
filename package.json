@@ -1,18 +1,17 @@
 {
-  "name": "escape_text_content",
+  "name": "@nathanfaucett/escape_text_content",
   "version": "0.0.1",
-  "description": "escape text content for the browser and node.js",
+  "description": "escape text content, <div> becomes &lt;div&gt;",
   "repository": {
     "type": "git",
     "url": "https://github.com/nathanfaucett/escape_text_content.git"
   },
   "main": "src/index.js",
   "scripts": {
-    "bench": "node bench",
     "test": "npm run test-node",
     "test-node": "node ./test | ./node_modules/.bin/tap-spec",
     "test-node-raw": "node ./test",
-    "test-browser-local": "zuul --local 8080 --ui tape -- ./test"
+    "test-browser-local": "zuul --local 9999 --ui tape -- ./test"
   },
   "keywords": [
     "escape_text_content",
@@ -22,9 +21,9 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.11.3",
-    "grunt-jsbeautifier": "^0.2.10",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-jsbeautifier": "^0.2.13",
     "tap-spec": "^4.1.0",
     "tape": "^4.2.0",
     "zuul": "^3.6.0"
